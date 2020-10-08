@@ -1,0 +1,22 @@
+<main>
+    <div id="addNew">
+        <h2>Añadir una nota nueva</h2>
+        <a [routerLink]="['crearNota']" class="button"> + </a>
+    </div>
+    <div *ngFor="let note of allNotes" id="card" style="background-color: {{note.color}}">
+
+        <div id="toogles">
+            <a [routerLink]="['/notas/editar/' + note._id]">
+                <fa-icon [icon]="faE"></fa-icon>
+            </a>
+            <a (click)="deleteNote(note._id)">
+                <fa-icon [icon]="faD"></fa-icon>
+            </a>
+        </div>
+        <a [routerLink]="['/notas/detalle/'+ note._id]">
+            <h2>{{note.title}}</h2>
+            <h3>{{note.data}}</h3>
+            <p>{{note.description}}</p>
+        </a>
+    </div>
+</main>

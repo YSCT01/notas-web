@@ -1,0 +1,32 @@
+/*-- CLASSES --*/
+
+.button {
+    display: block;
+    width: 80%;
+    height: 50px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 45px;
+    transition: 400ms;
+    box-shadow: 2px 2px rgba(104, 104, 104, 0.4);
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #999999;
+    color: black!important;
+    transform: scale(1.2, 1.2);
+}
+
+.error {
+    padding: 0;
+    margin: auto auto;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}

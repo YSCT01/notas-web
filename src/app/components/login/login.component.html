@@ -1,0 +1,28 @@
+<main>
+    <div id="top">
+        <h1>Ingresa</h1>
+        <h2>Introduce tus datos y comienza a crear</h2>
+    </div>
+    <form #login="ngForm" [formGroup]="loginForm" (ngSubmit)="loginUser()" novalidate>
+        <label>Correo
+            <span class="error" *ngIf="loginForm.get('email')?.touched && loginForm.get('email').hasError('required')">
+                El correo es requerido
+            </span>
+            <span class="error" *ngIf="loginForm.get('email')?.touched && loginForm.get('email').hasError('pattern')">
+                Ingresa una dirección de correo válida
+            </span>
+        </label>
+        <input formControlName='email' type="email" name="email" placeholder="Introduce tu correo">
+        <label>Contraseña
+            <span class="error" *ngIf="loginForm.get('password')?.touched && loginForm.get('password').hasError('required')">
+               La contraseña es requerida
+            </span>
+            <span class="error" *ngIf="loginForm.get('password')?.touched && loginForm.get('password').hasError('minlength')">
+               La contraseña debe tener al menos 5 caracteres
+            </span>
+        </label>
+        <input formControlName='password' type="password" name="password" placeholder="Introduce tu contraseña">
+        <input class="button" type="submit" value="Ingresa" [disabled]="loginForm.invalid">
+        <a [routerLink]="['../registrate']">¿No tienes cuenta? ¡Regístrate aquí!</a>
+    </form>
+</main>

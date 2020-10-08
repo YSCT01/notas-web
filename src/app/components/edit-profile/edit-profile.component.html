@@ -1,0 +1,10 @@
+<main>
+    <h1>Modifica tus datos</h1>
+    <form #form="ngForm" [formGroup]="modifyForm" novalidate>
+        <label for="surname">Nombre/s</label>
+        <input formControlName="surname" type="text">
+        <label for="lastname">Apellido/s</label>
+        <input formControlName="lastname" type="text">
+        <input class="button" type="submit" value="Actualiza tus datos" (click)="updateData()" [disabled]="modifyForm.invalid">
+    </form>
+</main>

@@ -1,0 +1,21 @@
+<main>
+    <h1>Tu Perfil</h1>
+    <div id="profile">
+        <div id="data">
+            <div id="text">
+                <h2>Nombre</h2>
+                <h3>{{surname}}</h3>
+                <h2>Apellido</h2>
+                <h3>{{lastname}}</h3>
+                <h2>Correo</h2>
+                <h3>{{email}}</h3>
+            </div>
+            <img src="../../../assets/user.png">
+        </div>
+        <div id="actions">
+            <a [routerLink]="['../editar/'+email]">Modificar datos</a>
+            <a [routerLink]="['../../notas/']">Mis notas</a>
+            <a (click)="logout()">Cerrar sesión</a>
+        </div>
+    </div>
+</main>

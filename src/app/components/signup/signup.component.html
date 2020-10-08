@@ -1,0 +1,54 @@
+<main>
+    <div id="top">
+        <h1>Regístrate</h1>
+        <h2>Comienza a guardar tus notas</h2>
+    </div>
+    <form #signin="ngForm" [formGroup]="signinForm" (ngSubmit)="signinUser()" novalidate>
+        <label for="surname">Nombre
+            <span class="error" *ngIf="signinForm.get('surname')?.touched && signinForm.get('surname').hasError('required')">
+                El nombre es requerido
+            </span>
+            <span class="error" *ngIf="signinForm.get('surname')?.touched && signinForm.get('surname').hasError('pattern')">
+                El nombre es inválido, ingresa sólo letras
+            </span>
+        </label>
+        <input formControlName='surname' type="text" placeholder="Tu/s nombre/s">
+        <label for="lastname">Apellido
+            <span class="error" *ngIf="signinForm.get('lastname')?.touched && signinForm.get('lastname').hasError('required')">
+                El nombre es requerido
+            </span>
+            <span class="error" *ngIf="signinForm.get('lastname')?.touched && signinForm.get('lastname').hasError('pattern')">
+                El apellido es invalido, ingresa sólo letras
+            </span>
+        </label>
+        <input formControlName='lastname' type="text" placeholder="Tu/s apellido/s">
+        <label for="email">Correo
+              <span class="error" *ngIf="signinForm.get('email')?.touched && signinForm.get('email').hasError('required')">
+            El correo es requerido
+        </span>
+        <span class="error" *ngIf="signinForm.get('email')?.touched && signinForm.get('email').hasError('pattern')">
+           Ingresa una dirección de correo válida
+        </span></label>
+        <input formControlName='email' type="email" placeholder="Tu email">
+        <label for="password">Contraseña
+            <span class="error" *ngIf="signinForm.get('password')?.touched && signinForm.get('password').hasError('required')">
+                La contraseña es requerida
+            </span>
+            <span class="error" *ngIf="signinForm.get('password')?.touched && signinForm.get('password').hasError('minlength')">
+                La contraseña debe tener al menos 5 caracteres
+             </span>
+        </label>
+        <input formControlName='password' type="password" placeholder="Tu contraseña(mínimo 5 caracteres)">
+        <label for="confirm">Confirmar contraseña
+            <span class="error" *ngIf="signinForm.get('confirm')?.touched && signinForm.get('confirm').hasError('required')">
+                La confirmación de la contraseña es requerida
+            </span>
+            <span class="error" *ngIf="signinForm.get('confirm')?.touched && this.signinForm.get('confirm').value != this.signinForm.get('password').value">
+                Las contraseñas no coinciden, revisa los datos.
+            </span>
+        </label>
+        <input formControlName='confirm' type="password" placeholder="Confirma tu contraseña" required>
+        <input type="submit" value="Regístrate" class="button" [disabled]="signinForm.invalid">
+        <a [routerLink]="['../ingresa']">¿Ya tienes cuenta? Ingresa</a>
+    </form>
+</main>

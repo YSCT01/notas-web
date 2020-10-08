@@ -1,0 +1,23 @@
+<main>
+
+    <div id="navigate">
+        <a [routerLink]="['../../']">
+            <fa-icon [icon]="faR"></fa-icon>
+        </a>
+        <a [routerLink]="['../../editar/'+ noteDetails._id]">
+            <fa-icon [icon]="faE"></fa-icon>
+        </a>
+    </div>
+    <div id="card" style="background-color: {{noteDetails.color}} ">
+        <h1>
+            {{noteDetails.title}}
+        </h1>
+        <h2>
+            {{noteDetails.data}}
+        </h2>
+        <p>
+            {{noteDetails.description}}
+        </p>
+    </div>
+
+</main>

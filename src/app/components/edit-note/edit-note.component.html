@@ -1,0 +1,18 @@
+<main>
+    <h1>Edita tu Nota</h1>
+    <form #note="ngForm" [formGroup]="noteForm" style="background-color: {{noteForm.get('color').value}}">
+        <div id="add">
+            <a (click)="dismissNote()">
+                <fa-icon [icon]="faR"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faG" (click)="updateData()"></fa-icon>
+            </a>
+        </div>
+        <input formControlName='title' type="text" name="title">
+        <label for="color">Escoje un color de fondo</label>
+        <input formControlName='color' type="color" name="color">
+        <textarea formControlName='description' name="description">  </textarea>
+
+    </form>
+</main>

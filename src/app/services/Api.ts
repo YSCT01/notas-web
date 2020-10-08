@@ -1,0 +1,1 @@
+export const URL = "https://note-api-ysct.herokuapp.com";

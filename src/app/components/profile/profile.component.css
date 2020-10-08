@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5% 95%;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: auto auto;
+}
+
+#profile {
+    width: 1100px;
+    height: 90%;
+    margin: auto auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+    display: grid;
+    grid-template-rows: 85% 15%;
+    justify-content: center;
+}
+
+#profile #data {
+    width: 950px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#profile #data #text {
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+#profile #text h2 {
+    font-size: 40px;
+    color: black;
+    margin: auto auto;
+    text-align: center;
+}
+
+#profile #text h3 {
+    font-size: 35px;
+    color: rgb(0, 0, 128);
+    margin: auto auto;
+}
+
+#profile #data img {
+    margin: auto auto;
+    width: 70%;
+    border-radius: 25px;
+    border: 1px solid black;
+    transition: 400ms;
+}
+
+#profile #data img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#profile #actions {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+
+#profile #actions a {
+    font-size: 20px;
+    margin: auto auto;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 400ms;
+    color: black;
+    text-shadow: 1px 1px rgba(128, 128, 128, 0.5);
+}
+
+#profile #actions a:hover {
+    color: blue;
+    transform: scale(1.3, 1.3);
+}

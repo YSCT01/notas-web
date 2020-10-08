@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    display: grid;
+    grid-template-rows: 150px 730px 200px;
+    overflow-x: hidden;
+}
+
+
+/*-- HEADER --*/
+
+header {
+    display: grid;
+    grid-template-columns: 450px 750px;
+    justify-content: space-evenly;
+    background-color: rgba(250, 255, 2, 0.75);
+    box-shadow: 1px 1.5px rgba(104, 104, 104, 0.2);
+}
+
+
+/*--  HEADER LEFT  --*/
+
+header div {
+    padding-top: 25px;
+}
+
+header div a {
+    text-decoration: none;
+    display: grid;
+    grid-row: auto auto;
+    color: Black;
+    transition: 400ms;
+    width: fit-content;
+    text-shadow: 2px 2px rgba(104, 104, 104, 0.4);
+}
+
+header div span {
+    font-size: 55px;
+}
+
+header div #author {
+    font-size: 20px;
+}
+
+header div a:hover {
+    color: rgb(0, 0, 145);
+    transform: scale(1.1, 1.1);
+}
+
+
+/*--  HEADER RIGHT --*/
+
+header nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: right;
+    text-align: right;
+}
+
+header nav a {
+    margin: auto auto;
+    padding: 7px;
+    margin-left: 45px;
+}
+
+header nav #login {
+    background-color: blue;
+}
+
+header nav #login:hover {
+    background-color: rgb(25, 25, 255, .8);
+}
+
+header nav #signup {
+    background-color: red;
+}
+
+header nav #signup:hover {
+    background-color: rgba(255, 25, 25, 0.80)
+}
+
+header #profile {
+    text-decoration: none;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px rgba(128, 128, 128, 0.3);
+    border-radius: 15px;
+}
+
+header #profile:hover {
+    color: blue;
+    transform: scale(1.2, 1.2);
+}
+
+
+/*-- FOOTER  --*/
+
+footer {
+    display: grid;
+    grid-template-rows: 25% 75%;
+    background-color: rgba(250, 255, 2, 0.75);
+    box-shadow: 1px -1.5px rgba(104, 104, 104, 0.2);
+}
+
+footer span {
+    margin: auto auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+footer #f_actions {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+}
+
+
+/*-- FOOTER LEFT --*/
+
+footer #social {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+}
+
+footer #social span {
+    margin: auto auto;
+    text-shadow: 1px 1px rgba(104, 104, 104, 0.4);
+}
+
+footer #i_social {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: auto 0;
+}
+
+footer #i_social a {
+    display: block;
+    text-decoration: none;
+    margin: auto auto;
+    font-size: 25px;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 100%;
+    transition: 400ms;
+    box-shadow: 2px 2px rgba(104, 104, 104, 0.4);
+}
+
+footer #i_social #twitter {
+    background-color: rgb(29, 161, 242)
+}
+
+footer #i_social #whatsapp {
+    background-color: rgb(74, 201, 89);
+}
+
+footer #i_social #instagram {
+    background: rgba(255, 220, 128, 1);
+    background: -moz-linear-gradient(45deg, rgba(255, 220, 128, 1) 0%, rgba(252, 175, 69, 1) 10%, rgba(247, 119, 55, 1) 19%, rgba(245, 96, 64, 1) 29%, rgba(253, 29, 29, 1) 35%, rgba(225, 48, 108, 1) 40%, rgba(193, 53, 132, 1) 55%, rgba(131, 58, 180, 1) 79%, rgba(88, 81, 219, 1) 90%, rgba(64, 93, 230, 1) 97%, rgba(64, 93, 230, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255, 220, 128, 1)), color-stop(10%, rgba(252, 175, 69, 1)), color-stop(19%, rgba(247, 119, 55, 1)), color-stop(29%, rgba(245, 96, 64, 1)), color-stop(35%, rgba(253, 29, 29, 1)), color-stop(40%, rgba(225, 48, 108, 1)), color-stop(55%, rgba(193, 53, 132, 1)), color-stop(79%, rgba(131, 58, 180, 1)), color-stop(90%, rgba(88, 81, 219, 1)), color-stop(97%, rgba(64, 93, 230, 1)), color-stop(100%, rgba(64, 93, 230, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(255, 220, 128, 1) 0%, rgba(252, 175, 69, 1) 10%, rgba(247, 119, 55, 1) 19%, rgba(245, 96, 64, 1) 29%, rgba(253, 29, 29, 1) 35%, rgba(225, 48, 108, 1) 40%, rgba(193, 53, 132, 1) 55%, rgba(131, 58, 180, 1) 79%, rgba(88, 81, 219, 1) 90%, rgba(64, 93, 230, 1) 97%, rgba(64, 93, 230, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(255, 220, 128, 1) 0%, rgba(252, 175, 69, 1) 10%, rgba(247, 119, 55, 1) 19%, rgba(245, 96, 64, 1) 29%, rgba(253, 29, 29, 1) 35%, rgba(225, 48, 108, 1) 40%, rgba(193, 53, 132, 1) 55%, rgba(131, 58, 180, 1) 79%, rgba(88, 81, 219, 1) 90%, rgba(64, 93, 230, 1) 97%, rgba(64, 93, 230, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(255, 220, 128, 1) 0%, rgba(252, 175, 69, 1) 10%, rgba(247, 119, 55, 1) 19%, rgba(245, 96, 64, 1) 29%, rgba(253, 29, 29, 1) 35%, rgba(225, 48, 108, 1) 40%, rgba(193, 53, 132, 1) 55%, rgba(131, 58, 180, 1) 79%, rgba(88, 81, 219, 1) 90%, rgba(64, 93, 230, 1) 97%, rgba(64, 93, 230, 1) 100%);
+    background: linear-gradient(45deg, rgba(255, 220, 128, 1) 0%, rgba(252, 175, 69, 1) 10%, rgba(247, 119, 55, 1) 19%, rgba(245, 96, 64, 1) 29%, rgba(253, 29, 29, 1) 35%, rgba(225, 48, 108, 1) 40%, rgba(193, 53, 132, 1) 55%, rgba(131, 58, 180, 1) 79%, rgba(88, 81, 219, 1) 90%, rgba(64, 93, 230, 1) 97%, rgba(64, 93, 230, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffdc80', endColorstr='#405de6', GradientType=1);
+}
+
+footer #i_social #facebook {
+    background-color: rgb(66, 103, 178);
+}
+
+footer #i_social #github {
+    background-color: rgb(70, 70, 70);
+}
+
+footer #i_social a:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+/*--  FOOTER RIGHT  --*/
+
+footer #f_nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: auto 0;
+    text-align: center;
+}
+
+footer #f_nav a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    transition: 400ms;
+    text-align: center;
+    text-shadow: 1px 1px rgba(104, 104, 104, 0.4);
+}
+
+footer #f_nav a:hover {
+    color: blue;
+    transform: scale(1.2, 1.2);
+}
