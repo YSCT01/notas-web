@@ -43,7 +43,6 @@ form {
     margin: 10% auto;
     height: 70%;
     display: grid;
-    padding: 10px;
     grid-template-columns: 90%;
     grid-template-rows: auto auto auto auto auto auto;
     justify-content: center;
@@ -113,4 +112,10 @@ form a {
 form a:hover {
     color: blue;
     transform: scale(1.2, 1.2);
+}
+
+@media (max-width:750px) {
+    form label {
+        text-align: center;
+    }
 }

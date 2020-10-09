@@ -71,7 +71,7 @@ header nav a {
     font-size: .7em;
     margin: auto auto;
     padding: 7px;
-    margin-left: 45px;
+    margin-left: 2em;
 }
 
 header nav #login {
@@ -93,10 +93,11 @@ header nav #signup:hover {
 header #profile {
     text-decoration: none;
     text-align: center;
-    font-size: 35px;
+    font-size: .6em;
     color: black;
     transition: 400ms;
     cursor: pointer;
+    height: 90%;
     box-shadow: 1.5px 1.5px rgba(128, 128, 128, 0.3);
     border-radius: 15px;
 }
@@ -110,19 +111,14 @@ header #profile:hover {
 /*-- FOOTER  --*/
 
 footer {
-    display: grid;
-    grid-template-rows: 25% 75%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(250, 255, 2, 0.75);
     box-shadow: 1px -1.5px rgba(104, 104, 104, 0.2);
 }
 
-footer span {
-    margin: auto auto;
-    text-align: center;
-    font-size: .8em;
-}
-
 footer #f_actions {
+    height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: space-between;
@@ -155,9 +151,10 @@ footer #i_social a {
     display: block;
     text-decoration: none;
     font-size: .45em;
-    height: 50%;
-    width: 1.2em;
-    padding: 8px;
+    height: 1.4em;
+    width: 1.4em;
+    padding: 3px;
+    text-align: center;
     margin: auto auto;
     color: white;
     border-radius: 100%;
@@ -258,5 +255,11 @@ footer #f_nav a:hover {
     }
     header div a {
         font-size: .7em;
+    }
+}
+
+@media (max-width: 450px) {
+    header nav a {
+        width: 65%!important;
     }
 }
