@@ -8,7 +8,8 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 200px auto;
+    grid-template-columns: 70%;
+    grid-template-rows: auto 70vh;
     justify-content: center;
     margin: auto auto;
     background-color: rgb(197, 197, 255);
@@ -19,19 +20,18 @@ main {
 
 #top {
     display: grid;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: auto auto;
     text-align: center;
 }
 
 #top h1 {
-    font-size: 65px;
+    font-size: 1.5em;
     margin: auto auto;
-    width: 70%;
     border-bottom: 2px solid black;
 }
 
 #top h2 {
-    font-size: 45px;
+    font-size: 1em;
     margin: auto auto;
 }
 
@@ -39,23 +39,24 @@ main {
 /*-- FORM --*/
 
 form {
-    width: 900px;
-    height: fit-content;
+    width: 100%;
+    margin: 10% auto;
+    height: 70%;
     display: grid;
-    grid-template-columns: auto;
-    padding: 20px;
+    padding: 10px;
+    grid-template-columns: 90%;
+    grid-template-rows: auto auto auto auto auto auto;
+    justify-content: center;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 30px;
     overflow-y: hidden;
     overflow-x: hidden;
     box-shadow: 2px 2px rgba(104, 104, 104, 0.4);
 }
 
 form label {
-    font-size: 25px;
+    font-size: .8em;
     text-align: left;
     padding: 3px;
     height: fit-content;
@@ -66,7 +67,7 @@ form label {
 form input[type="email"],
 form input[type="text"],
 form input[type="password"] {
-    font-size: 18px;
+    font-size: .6em;
     padding: 8px;
     color: rgb(15, 15, 15);
     width: 80%;
@@ -79,12 +80,11 @@ form input[type="password"] {
 }
 
 form input[type="submit"] {
-    padding: 0;
+    height: 1.5em;
+    font-size: .6em;
     color: white;
     width: 40%;
     margin: auto auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 form input[type="submit"]:disabled {
@@ -103,9 +103,9 @@ form a {
     display: block;
     width: fit-content;
     height: fit-content;
-    margin: auto auto;
+    margin: 10px auto;
     text-decoration: none;
-    font-size: 20px;
+    font-size: .5em;
     color: black;
     transition: 400ms;
 }

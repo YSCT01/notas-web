@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(1em + 1vh);
 }
 
 #main {
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 150px 730px 200px;
+    grid-template-rows: 17vh auto 18vh;
     overflow-x: hidden;
 }
 
@@ -15,23 +18,24 @@
 
 header {
     display: grid;
-    grid-template-columns: 450px 750px;
+    grid-template-columns: 35% 65%;
     justify-content: space-evenly;
     background-color: rgba(250, 255, 2, 0.75);
     box-shadow: 1px 1.5px rgba(104, 104, 104, 0.2);
 }
 
+header div {
+    margin: auto auto;
+}
+
 
 /*--  HEADER LEFT  --*/
-
-header div {
-    padding-top: 25px;
-}
 
 header div a {
     text-decoration: none;
     display: grid;
     grid-row: auto auto;
+    margin: auto auto;
     color: Black;
     transition: 400ms;
     width: fit-content;
@@ -39,11 +43,11 @@ header div a {
 }
 
 header div span {
-    font-size: 55px;
+    font-size: 1.5em;
 }
 
 header div #author {
-    font-size: 20px;
+    font-size: .6em;
 }
 
 header div a:hover {
@@ -55,13 +59,16 @@ header div a:hover {
 /*--  HEADER RIGHT --*/
 
 header nav {
+    width: 80%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: right;
     text-align: right;
+    margin: auto auto;
 }
 
 header nav a {
+    font-size: .7em;
     margin: auto auto;
     padding: 7px;
     margin-left: 45px;
@@ -112,7 +119,7 @@ footer {
 footer span {
     margin: auto auto;
     text-align: center;
-    font-size: 25px;
+    font-size: .8em;
 }
 
 footer #f_actions {
@@ -126,29 +133,32 @@ footer #f_actions {
 
 footer #social {
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 30% 70%;
     text-align: center;
 }
 
 footer #social span {
+    font-size: .6em;
     margin: auto auto;
     text-shadow: 1px 1px rgba(104, 104, 104, 0.4);
 }
 
 footer #i_social {
+    height: 80%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     margin: auto 0;
+    overflow-y: hidden;
 }
 
 footer #i_social a {
     display: block;
     text-decoration: none;
+    font-size: .45em;
+    height: 50%;
+    width: 1.2em;
+    padding: 8px;
     margin: auto auto;
-    font-size: 25px;
-    padding: 10px;
-    width: 25px;
-    height: 25px;
     color: white;
     border-radius: 100%;
     transition: 400ms;
@@ -183,7 +193,7 @@ footer #i_social #github {
 }
 
 footer #i_social a:hover {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.15, 1.15);
 }
 
 
@@ -199,7 +209,7 @@ footer #f_nav {
 footer #f_nav a {
     cursor: pointer;
     text-decoration: none;
-    font-size: 22px;
+    font-size: .6em;
     color: black;
     transition: 400ms;
     text-align: center;
@@ -209,4 +219,44 @@ footer #f_nav a {
 footer #f_nav a:hover {
     color: blue;
     transform: scale(1.2, 1.2);
+}
+
+
+/* Mobile  */
+
+@media (max-width:1100px) {
+    footer #f_nav a {
+        font-size: .4em;
+    }
+    footer #social span {
+        font-size: .5em;
+    }
+}
+
+@media (max-width:800px) {
+    footer #f_actions {
+        width: 95%;
+        height: 100%;
+        margin: auto auto;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    footer #f_actions #social {
+        width: 100%;
+    }
+    header {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@media (max-width: 701px) {
+    * {
+        font-size: calc(1em + 1vw);
+    }
+    header {
+        grid-template-columns: 20% 80%;
+    }
+    header div a {
+        font-size: .7em;
+    }
 }
