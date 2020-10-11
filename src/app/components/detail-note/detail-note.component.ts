@@ -13,6 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailNoteComponent implements OnInit {
 faE;
 faR;
+author:String;
+email:String;
 public noteDetails: Note;
 
   constructor(
@@ -22,12 +24,16 @@ public noteDetails: Note;
    }
 
   ngOnInit(): void {
+    this.email = window.localStorage['email'];
     this.faE = faEdit;
     this.faR = faArrowLeft;
     this._route.params.subscribe(params=>{
       var id = params.id;
       this.getNote(id);
+      
     });
+    
+    
   }
 
 
@@ -38,6 +44,7 @@ public noteDetails: Note;
           this.noteDetails = response.note;
           this.noteDetails.date = new Date(this.noteDetails.date);
           this.noteDetails.data = this.noteDetails.date.toDateString();
+         
         },
         error=>{
           alert(error.error.text);

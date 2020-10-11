@@ -8,35 +8,36 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 10% 80%;
+    grid-template-rows: 10vh 70vh;
     justify-content: center;
 }
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 1.5em;
     margin: auto auto;
 }
 
 form {
-    width: 900px;
-    height: fit-content;
+    width: 80vw;
+    height: 90%;
     display: grid;
-    grid-template-columns: auto;
-    padding: 20px;
+    grid-template-columns: 90%;
+    grid-template-rows: 5% 8% 8% 9% 70%;
+    padding: 5px;
     text-align: center;
+    justify-content: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin: auto auto;
     overflow-y: hidden;
     overflow-x: hidden;
     box-shadow: 2px 2px rgba(104, 104, 104, 0.4);
 }
 
 form input[type="text"] {
-    font-size: 25px;
-    padding: 8px;
+    font-size: .8em;
+    padding: 5px;
     color: rgb(15, 15, 15);
     width: 80%;
     height: fit-content;
@@ -49,7 +50,8 @@ form input[type="text"] {
 }
 
 form input[type="color"] {
-    font-size: 20px;
+    font-size: .6em;
+    height: 50%;
     padding: 8px;
     color: rgb(15, 15, 15);
     margin: auto auto;
@@ -62,15 +64,15 @@ form input[type="color"] {
 
 form textarea {
     width: 90%;
-    height: 350px;
+    height: 90%;
     resize: none;
-    padding: 20px;
+    padding: 5px;
     overflow-y: scroll;
     margin: 10px auto;
     border: none;
     border-radius: 15px;
     background-color: rgba(216, 216, 216, 0.4);
-    font-size: 20px;
+    font-size: .8em;
 }
 
 #add {
@@ -81,7 +83,7 @@ form textarea {
 
 #add a {
     margin: auto auto;
-    font-size: 18px;
+    font-size: .7em;
     color: black!important;
     cursor: pointer;
     transition: 400ms;
@@ -94,6 +96,8 @@ form textarea {
 #add a:hover {
     transform: scale(1.5, 1.5);
 }
-label{
+
+label {
+    font-size: .7em;
     margin: 5px auto;
 }

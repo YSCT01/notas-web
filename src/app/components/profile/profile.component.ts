@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
     this.email = window.localStorage['email'];
     this._route.params.subscribe(params=>{
       var urlemail = params.email;
-      console.log(urlemail);
+     
       if(urlemail != this.email){
         window.location.replace('inicio');
       }

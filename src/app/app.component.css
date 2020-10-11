@@ -97,7 +97,7 @@ header #profile {
     color: black;
     transition: 400ms;
     cursor: pointer;
-    height: 90%;
+    height: fit-content;
     box-shadow: 1.5px 1.5px rgba(128, 128, 128, 0.3);
     border-radius: 15px;
 }

@@ -71,7 +71,7 @@ form textarea {
     border: none;
     border-radius: 15px;
     background-color: rgba(216, 216, 216, 0.4);
-    font-size: 20px;
+    font-size: .8em;
     text-align: justify;
 }
 
@@ -83,7 +83,7 @@ form textarea {
 
 #add a {
     margin: auto auto;
-    font-size: 18px;
+    font-size: .7em;
     color: black!important;
     cursor: pointer;
     transition: 400ms;

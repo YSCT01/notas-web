@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup , Validators} from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserServices } from 'src/app/services/user.service';
 
 @Component({
@@ -17,6 +18,7 @@ email:String;
   constructor(
     private _userServices:UserServices,
     private _formBuilder: FormBuilder,
+    private _route:ActivatedRoute
   ) { 
 this.modifyForm = this._formBuilder.group({
   'surname':["", [Validators.required, Validators.pattern(".*\\S.*[a-zA-z0-9 ]")]],
@@ -32,7 +34,12 @@ this.modifyForm = this._formBuilder.group({
     this.email= window.localStorage['email'];
     this.modifyForm.get('surname').setValue(this.surname);
     this.modifyForm.get('lastname').setValue(this.lastname);
-    
+    this._route.params.subscribe(params=>{
+      var prof = params.email;
+      if(prof != this.email){
+        window.location.replace("inicio");
+      }
+    })
   }
 
 

@@ -4,6 +4,7 @@ import { Note } from '../../models/note';
 import {FormGroup, FormBuilder} from '@angular/forms';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-edit-note',
@@ -18,6 +19,9 @@ export class EditNoteComponent implements OnInit {
   noteForm:FormGroup;
 public id:String;
 public pdate: Date;
+public email:string;
+public author:String;
+
 
   constructor(
     private _notesServices:NotesServices,
@@ -34,12 +38,16 @@ public pdate: Date;
   ngOnInit(): void {
     this.faR = faTimes;
     this.faG = faCheck; 
+    this.email = window.localStorage['email'];
+
 
     this._route.params.subscribe(params=>{
        this.id = params.id;
       this.getData(this.id);
     });
     this.pdate = new Date();
+
+   
   }
 
 //get data of note
@@ -54,6 +62,7 @@ public pdate: Date;
           this.noteForm.get('title').setValue(this.editNote.title);
           this.noteForm.get('color').setValue(this.editNote.color);
           this.noteForm.get('description').setValue(this.editNote.description);
+          this.author = this.editNote.email_author;
       },
       error=>{
         window.location.replace('notas');
